@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Fluid Gradient</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  background:#050814;
+}
+
+/* الخلفية */
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+/* الطبقات */
+.blob{
+  position:absolute;
+  width:60vmax;
+  height:60vmax;
+  border-radius:50%;
+  filter: blur(60px);
+  opacity:0.8;
+}
+
+/* كل لون */
+.blob.blue{
+  background:#4f7cff;
+  top:-20%;
+  left:-20%;
+  animation: move1 20s linear infinite alternate;
+}
+
+.blob.purple{
+  background:#7b3fe4;
+  top:10%;
+  right:-20%;
+  animation: move2 25s linear infinite alternate;
+}
+
+.blob.cyan{
+  background:#22d3ee;
+  bottom:-25%;
+  left:20%;
+  animation: move3 30s linear infinite alternate;
+}
+
+/* الحركة (واضحة جدًا) */
+@keyframes move1{
+  from{ transform:translate(0,0); }
+  to{ transform:translate(30vw,20vh); }
+}
+
+@keyframes move2{
+  from{ transform:translate(0,0); }
+  to{ transform:translate(-35vw,25vh); }
+}
+
+@keyframes move3{
+  from{ transform:translate(0,0); }
+  to{ transform:translate(25vw,-30vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+  <div class="blob blue"></div>
+  <div class="blob purple"></div>
+  <div class="blob cyan"></div>
+</div>
+
+</body>
+</html>
