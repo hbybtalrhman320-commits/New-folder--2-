@@ -31,46 +31,47 @@ body{
   width:60vmax;
   height:60vmax;
   border-radius:50%;
-  filter: blur(60px);
-  opacity:0.8;
+  filter: blur(150px);
+  opacity:0.5;
+  mix-blend-mode: screen;
 }
 
-/* كل لون */
+/* الألوان */
 .blob.blue{
-  background:#4f7cff;
-  top:-20%;
-  left:-20%;
-  animation: move1 20s linear infinite alternate;
+  background:#1E90FF;
+  top:-30%;
+  left:-30%;
+  animation: move1 12s ease-in-out infinite alternate;
 }
 
 .blob.purple{
-  background:#7b3fe4;
-  top:10%;
-  right:-20%;
-  animation: move2 25s linear infinite alternate;
+  background:#8A2BE2;
+  top:5%;
+  right:-35%;
+  animation: move2 15s ease-in-out infinite alternate;
 }
 
 .blob.cyan{
-  background:#22d3ee;
-  bottom:-25%;
-  left:20%;
-  animation: move3 30s linear infinite alternate;
+  background:#00CED1;
+  bottom:-35%;
+  left:10%;
+  animation: move3 14s ease-in-out infinite alternate;
 }
 
-/* الحركة (واضحة جدًا) */
+/* الحركة */
 @keyframes move1{
-  from{ transform:translate(0,0); }
-  to{ transform:translate(30vw,20vh); }
+  0%{ transform:translate(0,0) rotate(0deg); }
+  100%{ transform:translate(50vw,35vh) rotate(360deg); }
 }
 
 @keyframes move2{
-  from{ transform:translate(0,0); }
-  to{ transform:translate(-35vw,25vh); }
+  0%{ transform:translate(0,0) rotate(0deg); }
+  100%{ transform:translate(-55vw,40vh) rotate(-360deg); }
 }
 
 @keyframes move3{
-  from{ transform:translate(0,0); }
-  to{ transform:translate(25vw,-30vh); }
+  0%{ transform:translate(0,0) rotate(0deg); }
+  100%{ transform:translate(45vw,-45vh) rotate(360deg); }
 }
 </style>
 </head>
